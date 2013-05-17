@@ -1,0 +1,71 @@
+/* CSS declarations go here */
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+
+textarea{resize: none}
+body { 
+	margin-top: 5px;
+	background: #8C001A;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Satisfy', cursive;
+	margin: 50px 30px 0px 30px;
+	color: black;
+}
+
+
+.row{
+	position: absolute;
+	vertical-align: middle;
+	left: 60.5%;
+	top: 23.8%;
+}
+
+.question{
+	position: absolute;
+	width: 400px;
+	height: 80px;
+	padding: 0px;
+	margin-bottom: 5px;
+	background: #ffffff;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	vertical-align: middle;
+	left: 35%;
+}
+
+.question:after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	right: -30px;
+	border-style: solid;
+	border-width: 20px 0 20px 30px;
+	border-color: transparent #ffffff;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+.votes{
+	position: relative;
+	right: -275px;
+	top: 20px;
+}
+
+.score{
+
+	position: relative;
+	right: -240px;
+	top: -30px;
+	font-size: 25pt;
+	color: #5cba5c;
+
+}
+
+.login{
+	position: relative;
+	left: 1000px;
+	top: 6px;
+}

@@ -1,0 +1,60 @@
+<head>
+  <title>Ask a lecturer</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  {{> header}}
+  {{> main}}
+</body>
+
+<template name="header">
+	<div class="login">
+	{{loginButtons}}
+	</div>
+	<div id="header" align="center">
+	<h1> Lecture Question Board </h1>
+	</br>
+	</div>
+</template>
+
+<template name="main">
+	<div id="main" role="main" align="center">
+		{{> compose}}
+		{{> list}}
+	</div>
+</template>
+
+<template name="compose">
+  <form id="new-que">
+    <textarea class="field"
+              id="que-body"
+              rows="2"
+              placeholder="Ask your lecturer a question ..."
+              required></textarea>
+	<div class="row">
+    <input type="submit" value="Create" class="btn btn-success">
+	</div>
+  </form>
+</template>
+
+<template name="list">
+      {{#each questions}}
+        {{> question}}
+		</br>
+      {{/each}}
+</template>
+
+<template name="question">
+  <div class="question {{selected}}" >
+	{{body}}
+  </div>
+  <div class="votes">
+	<i class="icon-thumbs-up"></i></br>
+	<i class="icon-thumbs-down"></i></br>
+	<i class="icon-remove"></i></br>
+  </div>
+  <div class="score">
+	<strong>{{score}}</strong></br>
+  <div>
+</template>
